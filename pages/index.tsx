@@ -21,9 +21,13 @@ export default function Home() {
             Start learning  by editing&nbsp;
             <code className={styles.code}>pages/index.tsx</code>
           </p>
-          <Link href='/posts/posts'>All Post</Link>
+          <Link href='/posts/all-posts'>All Post</Link>
 
-          <Link href='/posts/first-post'>View First Post</Link>
+          {/* <Link href='/posts/first-post'>View First Post</Link> */}
+          <Link href='/posts/1'>View First Post</Link>
+          <Link href='/posts/2'>View Second Post</Link>
+
+
           <Link href='/profile/user'>View User Profile</Link>
 
 

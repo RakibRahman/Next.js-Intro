@@ -1,9 +1,12 @@
 import React from 'react'
+import useSWR from 'swr';
 
-export default function user() {
-    return (
-        <h1 className="text-3xl text-red-300 font-bold underline">
-            Hello world!
-        </h1>
-    )
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
+
+export default function User() {
+    const { data, error, isLoading } = useSWR('https://jsonplaceholder.typicode.com/users/1', fetcher);
+
+    if (error) return <div>failed to load</div>;
+    if (isLoading) return <div>loading...</div>;
+    return <div>hello {JSON.stringify(data)}!</div>;
 }

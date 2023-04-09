@@ -1,3 +1,9 @@
+.blogHeader {
+  width: 100%;
+  min-height: 10vh;
+  background: #000000;
+  padding: 10px;
+}
 .heading2Xl {
   font-size: 3.5rem;
   line-height: 1.2;
